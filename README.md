@@ -1,5 +1,7 @@
 # Bash
 
+.bash_profile
+
 ```
 # Maven autocompletion
 # https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion
@@ -12,9 +14,13 @@ parse_git_branch() {
 export PS1='\h:\w$(parse_git_branch) \$ '
 ```
 
+## Prompt
+
+```[CLMBP:~/Dev/devstuff]  [master] $ ```
+
 # Git
 
-Git: .gitconfig
+.gitconfig
 
 ```
 [credential]
