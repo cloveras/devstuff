@@ -1,7 +1,8 @@
-h1. Git
+# Git
 
 Git: .gitconfig
 
+```
 [credential]
 	helper = osxkeychain
 [user]
@@ -15,3 +16,4 @@ Git: .gitconfig
 	b = branch
 	l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cr %C(bold blue)by %an %Creset' --abbrev-commit
 	t = tag -l
+	
