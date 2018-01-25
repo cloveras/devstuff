@@ -1,3 +1,7 @@
+h1. Git
+
+Git: .gitconfig
+
 [credential]
 	helper = osxkeychain
 [user]
