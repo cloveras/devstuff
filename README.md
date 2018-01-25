@@ -1,0 +1,13 @@
+[credential]
+	helper = osxkeychain
+[user]
+	name = Christian Løverås
+	email = cl@superelectric.net
+[alias]
+	co = checkout
+	s = status
+	f = fetch -p
+	p = pull
+	b = branch
+	l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cr %C(bold blue)by %an %Creset' --abbrev-commit
+	t = tag -l
