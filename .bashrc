@@ -1,9 +1,10 @@
 # Sourced by .bash_profile
+
 # Load the default .profile
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" 
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
@@ -49,6 +50,8 @@ alias la='ls -la'
 alias gs='git status'
 alias gp='git push'
 alias gc='git commit -v'
+# Pull from all repos under current directory:
+alias gitall='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
