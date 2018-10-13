@@ -10,9 +10,8 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # Git autocompletion
 # https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
-fi
+# brew install git bash-completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # Maven autocompletion
 # https://github.com/juven/maven-bash-completion
