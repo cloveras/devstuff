@@ -10,8 +10,9 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # Git autocompletion
 # https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion
-# brew install git bash-completion
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+fi
 
 # Maven autocompletion
 # https://github.com/juven/maven-bash-completion
@@ -44,6 +45,8 @@ alias m='less'
 alias ls='ls -FC'
 alias ll='ls -l'
 alias la='ls -la'
+
+alias newmacaddress=`sudo /System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport --disassociate &&  sudo ifconfig en0 ether $(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/./0/2; s/.$//') && networksetup -detectnewhardware` 
 
 # Git: https://github.com/Bash-it/bash-it/blob/master/aliases/available/git.aliases.bashs
 alias gs='git status'
