@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# From https://github.com/DaFuqtor/powerchime/blob/master/powerchime.sh it seems.
+
 powerchime() {
   local pc='PowerChime'
   local running=1
